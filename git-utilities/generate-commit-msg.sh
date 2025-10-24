@@ -17,10 +17,11 @@ DIFF_OUTPUT=$(git diff --cached)
 
 # 4. Construct the prompt
 PROMPT=$(cat <<EOF
-You are an expert developer assistant.
-Analyze the following Git diff and generate a concise, conventional, and clear commit message.
-The commit message must be the ONLY output (no preamble, no markdown, no explanation)
-Output ONLY the single-line commit message and nothing else.
+Generate a concise git commit message written in present tense for the following code diff with the given specifications below.
+Specifications:
+- Use clear and descriptive language
+- The commit message must be ONLY output (no preamble, no markdown, no explanation)
+- Output only the single-line commit message and nothing else
 
 Diff:
 $DIFF_OUTPUT
