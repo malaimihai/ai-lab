@@ -36,10 +36,6 @@ CLEAN_MSG=$(echo "${COMMIT_MSG}" | xargs)
 
 # 6. Final Commit
 if [ -n "$CLEAN_MSG" ]; then
-    echo "---"
-    echo "Generated Message:"
-    echo "$CLEAN_MSG"
-    echo "---"
 
     # Pass any arguments from the command line to 'git commit'
     # E.g., 'git aicommit --no-verify' or 'git aicommit -e'
